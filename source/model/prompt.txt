@@ -1,0 +1,26 @@
+        {{#block hidden=True}}
+        {{#system~}}
+        You are a helpful assistant.
+        {{~/system}}
+                                                
+        {{#user~}}
+        You will answer the user in the following conversation. At every step, I will provide you with the user input, as well as a object list reminding you what object are available. You need to decide what the user need at the moment based on object list and user input. There is no need to provide any extra information about the object.
+        Your answer should meet the following requirement:
+        1. within one sentence.
+        2. do not ask any type of questions.
+        3. Always answer one and only one object and the object must be on the list.
+        {{~/user}}
+        {{/block}}                                     
+
+        {{~! Then the conversation unrolls }}
+        {{~#geneach 'conversation' stop=False}}
+        {{#user~}}
+        User: {{set 'this.input' (await 'input')}}
+        Comment: Remember, the object you choose must be on the list. Object list is {{object_list}}. Do not answer with question.
+        {{~/user}}
+
+                        
+        {{#assistant~}}
+        {{gen 'this.response' temperature=0.2 max_tokens=300}}
+        {{~/assistant}}
+        {{~/geneach}}''')
