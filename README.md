@@ -26,10 +26,15 @@ limitation:
 - objects that can be detected are a bit limited and accuracy is not high
 - llm accuracy can be improved
 
+# Demo
+[![Watch the video](https://img.youtube.com/vi/F9CUy3II4gI/hqdefault.jpg)](https://youtu.be/F9CUy3II4gI)
+
 P.S. 
 the eye-to-hand calibration program is modified. No rtde library or urp script are needed.
 use the program:
+
 step 0: install requirements.txt
+
 1 run  ./Demo-ArmGPT/zivid-python-samples/source/applications/advanced/hand_eye_calibration/hand_eye_calibration.py
 
 2 manually move the robot arm(with checkboard) to a position
