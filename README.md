@@ -30,9 +30,14 @@ P.S.
 the eye-to-hand calibration program is modified. No rtde library or urp script are needed.
 use the program:
 step 0: install requirements.txt
-1 run  ./Demo-ArmGPT/zivid-python-samples/source/applications/advanced/hand_eye_calibration/hand_eye_calibration.py 
+1 run  ./Demo-ArmGPT/zivid-python-samples/source/applications/advanced/hand_eye_calibration/hand_eye_calibration.py
+
 2 manually move the robot arm(with checkboard) to a position
+
 3 type any key except 'q'
+
 4 view the image and press 'y' if you would like to save the point cloud and pose of robot arm
+
 5 repeat the above process for 20 times with different positions
+
 6 press 'q' and the program will output a yaml file at dataset folder
